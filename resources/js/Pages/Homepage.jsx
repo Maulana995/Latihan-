@@ -1,13 +1,14 @@
-import React from "react";
-import { Link, Head } from '@inertiajs/inertia-react';
+import { Head } from '@inertiajs/react';
 
-export default function Homepage(props) {
-    console.log(props)
-    return (
-        <div className='flex justify-center items-center min-h-screen'>
-            <Head title="Latihan laravel"/>
-                
-            <h1>Homepage</h1>
+export default function Homepage(props){
+    return(
+        <div>
+            {/* Menggunakan komponen Head untuk mengatur judul halaman */}
+            <Head title="Hallo" />
+            <div>
+                {/* Menampilkan judul halaman */}
+                <h1>Hallo World</h1>
+            </div>
         </div>
     )
 }
