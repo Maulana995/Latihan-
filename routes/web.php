@@ -16,11 +16,12 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Homepage', [
-        'title' => 'cuyNews Homepage',
-        'description' => 'Selamat datang di portal berita cuy universe'
-    ]);
+route::get('/', function () {
+    return inertia::render('Homepage');
+});
+
+Route::get('/home', function () {
+    return Inertia::render('coba');
 });
 
 Route::get('/welcome', function () {
