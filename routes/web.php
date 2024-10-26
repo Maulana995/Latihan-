@@ -17,12 +17,12 @@ use Inertia\Inertia;
 */
 
 route::get('/', function () {
-    return inertia::render('Homepage');
+    return inertia::render('Homepage', [
+        'title' => 'Selamat Belajar',
+        'description' => 'html,css,js,php,jsx,laravel',
+    ]);
 });
 
-Route::get('/home', function () {
-    return Inertia::render('coba');
-});
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [
