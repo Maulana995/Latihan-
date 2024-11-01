@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\NewsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,7 @@ use Inertia\Inertia;
 |
 */
 
-route::get('/', function () {
-    return inertia::render('Homepage', [
-        'title' => 'Selamat Belajar',
-        'description' => 'html,css,js,php,jsx,laravel',
-    ]);
-});
+Route::get('/', [NewsController::class, 'index']);
 
 
 Route::get('/welcome', function () {

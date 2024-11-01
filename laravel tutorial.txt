@@ -1,0 +1,44 @@
+composer require laravel/breeze --dev 
+untuk pengistalan breeze
+
+
+php artisan breeze:install react
+untuk pengistalan react
+
+npm install 
+mengistal note_module
+
+php artisan make:model makanan -mcr 
+mengcreate table
+
+php artisan db:seed --class=makananSeeder
+untuk meng up table yang kita buat
+
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class makananseeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+
+        for ($i = 0; $i < 10; $i++) {
+            DB::table('makanans')->insert([
+                'name' => fake()->name(),
+                'description' => fake()->text(5),
+                'price' => fake()->randomFloat(2, 1, 100),
+                'photo' => fake()->imageUrl(),
+                'category_id' => fake()->randomElement([1, 2, 3]),
+            ]);
+        }
+    }
+}
+menggunakan faker
